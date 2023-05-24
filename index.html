@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>센과치히로의 행방불명</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="text">현정</div>
+    <div class="fixed-bg" 
+        data-0="background-color: rgba(0,0,0);" 
+        data-500="background-color: rgba(0,0,0);"
+        >
+    </div>
+
+    <section id="slide01" class="slide" 
+    data-0="opacity:1; top:0%;" 
+    data-500="opacity:0; top:-100%;">
+        <div class="slide-content">
+            <div class="img1">
+                <img src="img/zzzzzz.png" alt="">
+            </div>
+
+            <div class="img1-1">
+                <img src="img/11111.gif" alt="">
+            </div>
+
+            <div class="music">
+                <audio autoplay controls>
+                    <source src="img/music.mp3">
+                </audio>
+            </div>
+            
+    </section>
+
+    <section id="slide02" class="slide" 
+    data-500="opacity:0;"
+    data-1000="opacity:1;"
+    data-1500="opacity:0;">
+    <div class="slide-content">
+        <div class="start">
+            <img src="img/flower.jpg" alt="">
+        </div>
+
+        <div class="text">
+            <p>"건강해라 치히로 또 만나자"</p>
+        </div>
+    </div>
+</section>
+
+    <section id="slide03" class="slide" 
+    data-1500="opacity:0; top:-100%;" 
+    data-2000="opacity:1; top:0;"
+    data-3000="opacity:0">
+        <div class="slide-content">
+            <div class="carbg">
+                <img src="img/carbg.jpg" alt="">
+            </div>
+        </div>
+    </section>
+    
+
+<!-- -------------script------------------ -->
+
+    <script src="js/skrollr.min.js"></script>
+    <script type="text/javascript">
+        var s = skrollr.init();
+
+        let text = document.querySelector('.text');
+        window.addEventListener("scroll", function () {
+            let wScroll = window.pageYOffset;
+            console.log(parseInt(wScroll))
+            text.innerHTML = parseInt(wScroll)
+        })
+    </script>
+</body>
+</html>
